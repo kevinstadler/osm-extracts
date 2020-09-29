@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for FILE in "$@"; do
+  osmconvert "$FILE" --drop-author --drop-version --out-pbf -o="$FILE.pbf" && echo "success!"
+done
